@@ -182,17 +182,17 @@ img {
   z-index: 1000; /* Set a higher z-index to ensure it appears in the foreground */
 }
 
-/* Responsive image styling */
-.responsive-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%; /* Ensures the image doesn't exceed the container width */
-}
 
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
   .brand {
     font-size: 1.2em; /* Decrease font size for the brand on mobile */
+  }
+
+  .responsive-image{
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensures the image doesn't exceed the container width */
   }
 
   .nav-links {
@@ -214,5 +214,27 @@ img {
 
   img {
     margin-top: 10px; /* Add margin for better spacing on mobile */
+  }
+}
+
+/* Existing styles */
+
+/* Add the following styles for computer screens */
+@media only screen and (min-width: 601px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  img {
+    max-width: 40%; /* Adjust the maximum width of the image as needed */
+    margin-right: 20px;
+  }
+
+  .welcome-text {
+    flex: 1;
+    max-width: 50%; /* Adjust the maximum width of the welcome text as needed */
   }
 }
