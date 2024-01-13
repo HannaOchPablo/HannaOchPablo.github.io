@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <title>Hablo Wedding</title>
+  <title>Hablos Bröllop</title>
 </head>
 <body>
   <div class="fixed-bar">
-    <a class="brand" href="index.html">Hanna & Pablo</a>
+    <a class="brand" href="index.html">Hanna och Pablo</a>
+    <div class="menu-icon" onclick="toggleMobileMenu()">
+      <img src="img/icons/dropdown.png" alt="Menu Icon">
+    </div>
     <nav class="nav-links">
       <a href="information_faq.html">Information & FAQ</a>
-      <a href="contact_us.html">Contact Us</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="contact_us.html">Kontakta Oss</a>
+      <a href="gallery.html">Galleri</a>
     </nav>
   </div>
 
@@ -21,12 +24,17 @@
     <header>
       <img src="img/puss.jpg" alt="Hanna and Pablo" class="responsive-image">
       <div class="welcome-text">
-        <h1>Welcome to Hanna & Pablo's Wedding</h1>
-        <p>Celebrate love with us on July 27, 2024</p>
-        <p>Riddersviks Herrgård, Någonstans i Hässelby</p>
+        <h1>Vi ska gifta oss!!</h1>
+        <p>Kom och fira detta med oss! <br> Lördagen den 27 Juli 2024, kl 15.00 <br> Riddersviks Herrgård</p>
       </div>
     </header>
     <!-- Other sections go here -->
+  </div>
+
+  <div class="mobile-dropdown" id="mobileDropdown">
+    <a href="information_faq.html">Information & FAQ</a>
+    <a href="contact_us.html">Kontakta Oss</a>
+    <a href="gallery.html">Galleri</a>
   </div>
 
 </body>

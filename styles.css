@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: bodyFont;
   background-color: #f5f5f5;
 }
 
@@ -20,10 +20,11 @@ body {
 
 .brand {
   color: #948181;
-  font-size: 1.5em;
+  font-size: 2em;
   text-decoration: none;
   margin-right: 20px;
   margin-left: 20px;
+  font-family: brandFont;
 }
 
 .nav-links {
@@ -177,6 +178,9 @@ img {
   font-weight: bold;
 }
 
+.course {
+  font-weight: bold;
+}
 .answer {
   color: #777;
   margin-top: 5px;
@@ -202,10 +206,13 @@ img {
 }
 
 
+
+
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
   .brand {
-    font-size: 1.2em; /* Decrease font size for the brand on mobile */
+    font-size: 2em; /* Decrease font size for the brand on mobile */
+    font-family: brandFont;
   }
 
   .responsive-image{
@@ -216,6 +223,7 @@ img {
 
   .nav-links {
     gap: 0px; /* Adjust gap between navigation links on mobile */
+    display: none;
   }
 
   .container {
@@ -251,9 +259,55 @@ img {
     z-index: 1; /* Send the background image to the back */
     transform: scaleX(-1);
   }
+  
+  .menu-icon img {
+    width: 35px; /* Adjust the size of the menu icon */
+    filter: invert(58%) sepia(10%) saturate(769%) hue-rotate(314deg) brightness(91%) contrast(77%);
+  }
+  
+  .mobile-dropdown {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background-color: #F9F5F2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .mobile-dropdown a {
+    color: #948181;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .mobile-dropdown a:hover {
+    color: #7c6c5e;
+    background-color: #f2f2f2;
+  }
+  
+  .mobile-dropdown.show-dropdown {
+    display: flex;
+    animation: fadeInDown 0.5s ease; /* Add a fade-in animation */
+  }
 }
 
-/* Existing styles */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Add the following styles for computer screens */
 @media only screen and (min-width: 601px) {
@@ -273,4 +327,23 @@ img {
     flex: 1;
     max-width: 50%; /* Adjust the maximum width of the welcome text as needed */
   }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .mobile-dropdown {
+    display: none;
+  }
+
+}
+
+@font-face {
+  font-family: brandFont;
+  src: url("fonts/Funky\ Signature.otf");
+}
+
+@font-face {
+  font-family: bodyFont;
+  src: url("fonts/Simonetta-Regular.otf");
 }

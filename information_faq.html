@@ -4,63 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Hablo Wedding - Information & FAQ</title>
+  <title>Hablos Bröllop</title>
 </head>
 <body>
   <div class="fixed-bar">
-    <a href="index.html" class="brand">Hanna & Pablo</a>
+    <a href="index.html" class="brand">Hanna och Pablo</a>
+    <div class="menu-icon" onclick="toggleMobileMenu()">
+      <img src="img/icons/dropdown.png" alt="Menu Icon">
+    </div>
     <nav class="nav-links">
-      <a href="information_faq.html">Information & FAQ</a>
-      <a href="contact_us.html">Contact Us</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="information_faq.html">Information</a>
+      <a href="contact_us.html">Kontakta Oss</a>
+      <a href="gallery.html">Galleri</a>
       <!-- Add a link for the Gallery page if you have created it -->
     </nav>
   </div>
 
   <div class="container">
 
+    <!-- TODO! Ändra om ordningen på containers så att alla kommer efter varandra lodrätt
+      ordning: dagsschema, frågor och svar, mat & dryck
+    Ta bort Q och A, fet text för frågan
 
+    
+    -->
     <div class="side-by-side-container">
       <div class="event-schedule">
-        <h3>Event Schedule</h3>
+        <h3>Dagsschema</h3>
         <ul>
           <li>
             <img src="img/icons/heart.png" alt="Heart Icon">
-            <span>We Do - 15:00</span>
+            <span>Vigsel 15.30-16.00</span>
           </li>
           <li>
             <img src="img/icons/toast.png" alt="Toast Icon">
-            <span>We Toast - 17:00</span>
+            <span>Mingel 16.00-17.00</span>
           </li>
           <li>
             <img src="img/icons/eat.png" alt="Eat Icon">
-            <span>We Eat - 18:00</span>
+            <span>Middag 17.00-21.00</span>
           </li>
           <li>
             <img src="img/icons/party.png" alt="Party Icon">
-            <span>We Party - 20:00-01:00</span>
+            <span>Fest 21.00-01.00</span>
           </li>
         </ul>
+
+        <h3>Mat & Dryck</h3>
+        <div class="foodmenu-item">
+          <p class="course">Förrätt</p>
+          <p class="food-description">Gårdens egenrökta fjordlax, örtkräm, potatiskrutonger, picklad lök</p>
+        </div>
+        <div class="foodmenu-item">
+          <p class="course">Förrätt</p>
+          <p class="food-description">Gårdens egenrökta fjordlax, örtkräm, potatiskrutonger, picklad lök</p>
+        </div>
+        <div class="foodmenu-item">
+          <p class="course">Förrätt</p>
+          <p class="food-description">Gårdens egenrökta fjordlax, örtkräm, potatiskrutonger, picklad lök</p>
+        </div>
+        <div class="foodmenu-item">
+          <p class="course">Förrätt</p>
+          <p class="food-description">Gårdens egenrökta fjordlax, örtkräm, potatiskrutonger, picklad lök</p>
+        </div>
+
       </div>
 
       <div class="faq-section">
-        <h3>FAQ</h3>
+        <h3>Frågor & Svar</h3>
         <div class="faq-item">
-          <p class="question">Q: What is the dress code for the wedding?</p>
-          <p class="answer">A: The dress code is formal. Please dress elegantly for the occasion.</p>
+          <p class="question">Q: Hitta till lokalen!</p>
+          <p class="answer">A: Riddersviksvägen 11, 165 72 Hässelby (embedda länk till google maps?) </p>
         </div>
         <div class="faq-item">
-          <p class="question">Q: Can I bring a plus one to the wedding?</p>
-          <p class="answer">A: Please check your invitation for whether a plus one is indicated. We want to ensure we have an accurate guest list.</p>
+          <p class="question">Q: Vad är det för klädkod</p>
+          <p class="answer">A: Kavaj, cocktail, trädgårdsfest</p>
         </div>
         <div class="faq-item">
-          <p class="question">Q: Are children allowed at the wedding?</p>
-          <p class="answer">A: While we love children, this event is for adults only. We hope you understand.</p>
+          <p class="question">Q: Får man ta med sig sina barn?</p>
+          <p class="answer">A: Ej välkomna fast sagt på finare sätt</p>
+        </div>
+        <div class="faq-item">
+          <p class="question">Q: Får man ta med sig "plus en"?</p>
+          <p class="answer">A:  Endast om det är adresserat.</p>
+        </div>
+        <div class="faq-item">
+          <p class="question">Q: Övrig information</p>
+          <p class="answer">A: Både ceremonin och middagen kommer att hållas utomhus, tänk på att passande kläder. </p>
+        </div>
+        <div class="faq-item">
+          <p class="question">Q: Bar & Dryck?</p>
+          <p class="answer">A: Det ingår (??) men om man är mer törstig finns betalbar på plats</p>
+        </div>
+        <div class="faq-item">
+          <p class="question">Q: Parkering?</p>
+          <p class="answer">A: KÖRA BIL</p>
+        </div>
+        <div class="faq-item">
+          <p class="question">Q: Övernattning?</p>
+          <p class="answer">A: Det finns några bokningsbara rum på herrgården, FÖRST TILL KVARNEEEEN</p>
+        </div>
+        <div class="faq-item">
+          <p class="question">Q: Gåvor / presenter?</p>
+          <p class="answer">A: Vi vill inte ha några presenter men om man vill kan man sponsra vår smekmånad genom att sätta in en liten slant på det här kontot ???</p>
         </div>
       </div>
     </div>
   </div>
-
+  <div class="mobile-dropdown" id="mobileDropdown">
+    <a href="information_faq.html">Information</a>
+    <a href="contact_us.html">Kontakta Oss</a>
+    <a href="gallery.html">Galleri</a>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

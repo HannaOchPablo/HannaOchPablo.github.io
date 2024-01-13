@@ -5,22 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <title>Contact Us</title>
+  <title>Hablos Bröllop</title>
 </head>
 <body>
   <div class="fixed-bar">
-    <a href="index.html" class="brand">Hanna & Pablo</a>
+    <a href="index.html" class="brand">Hanna och Pablo</a>
+    <div class="menu-icon" onclick="toggleMobileMenu()">
+      <img src="img/icons/dropdown.png" alt="Menu Icon">
+    </div>
     <nav class="nav-links">
       <a href="information_faq.html">Information & FAQ</a>
-      <a href="contact_us.html">Contact Us</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="contact_us.html">Kontakta Oss</a>
+      <a href="gallery.html">Galleri</a>
     </nav>
   </div>
 
   <div class="container">
     <header>
-      <h1>Contact Us</h1>
-      <p>Feel free to reach out to us with any questions or comments.</p>
+      <h1>OSA & Kontakt</h1>
+      <p>Nedan kan ni OSA via formuläret direkt på websidan eller så kan ni skicka ett meddelande till vår mejladress.</p>
+      
+      <address>
+      <a href="mailto:thehablos@gmail.com">hannaochpablo2024@gmail.com</a>
+      <br>
+      <br>
+      <a href="tel:0739099963">Hanna - 073-909 99 63</a>
+      <br>
+      <br>
+      <a href="tel:0707499039">Pablo - 070-749 90 39</a>
+      </address>
+      <p>Om ni har några frågor kan ni alltid ringa oss!</p>
     </header>
 
     <div class="contact-form">
@@ -52,54 +66,11 @@
     </div>
   </div>
 
-  <script>
-    // Define the Guest object constructor
-    function Guest(name, canBringPlusOne) {
-      this.name = name;
-      this.canBringPlusOne = canBringPlusOne;
-    }
 
-    // Dummy guest list for testing
-    const guest1 = new Guest("Hanna Pettersson Nyman", true);
-    const guest2 = new Guest("Pablo Ahava Pizarro", false);
-
-    const guestList = [guest1, guest2];
-
-    function checkName() {
-      const guestName = document.getElementById('guestName').value;
-      const bringPlusOneCheckbox = document.getElementById('bringPlusOneCheckbox');
-      const foundYouMessage = document.getElementById('foundYouMessage');
-      const personalizedMessage = document.getElementById('message');
-      const submitButton = document.getElementById('submitBtn');
-
-      // Search among the objects in guestList for a guest with the given name
-      const foundGuest = guestList.find(guest => guest.name === guestName);
-
-      if (foundGuest) {
-        // Display "Found you!" message in green text
-        foundYouMessage.style.color = 'green';
-        foundYouMessage.textContent = 'Found you!';
-  
-        // Show/hide the "I will bring a plus one!" checkbox based on canBringPlusOne value
-        if (foundGuest.canBringPlusOne) {
-          bringPlusOneCheckbox.style.display = 'block';
-        } else {
-          bringPlusOneCheckbox.style.display = 'none';
-        }
-
-        personalizedMessage.style.display = 'block';
-        submitButton.disabled = false;
-
-      } else {
-        // If the name is not found, display a message in red text
-        foundYouMessage.style.color = 'red';
-        foundYouMessage.textContent = 'Name not found in the guest list.';
-  
-        // Hide the "I will bring a plus one!" checkbox
-        bringPlusOneCheckbox.style.display = 'none';
-      }
-    }
-  </script>
-
+  <div class="mobile-dropdown" id="mobileDropdown">
+    <a href="information_faq.html">Information & FAQ</a>
+    <a href="contact_us.html">Kontakta Oss</a>
+    <a href="gallery.html">Galleri</a>
+  </div>
 </body>
 </html>
