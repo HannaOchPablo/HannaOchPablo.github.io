@@ -251,7 +251,9 @@ img {
   .container {
     margin: 60px auto 0; /* Adjust margin for better spacing on mobile */
   }
-
+  .container-main {
+    margin: 60px auto 0; /* Adjust margin for better spacing on mobile */
+  }
   header {
     flex-direction: column; /* Stack elements in a column on mobile */
     text-align: center;
@@ -265,8 +267,8 @@ img {
     margin-top: 10px; /* Add margin for better spacing on mobile */
   }
 
-  /* Add a new class for the background image */
-    .container::before {
+
+  .container-main::before {
     content: "";
     position: absolute;
     top: 300px;
@@ -281,6 +283,7 @@ img {
     z-index: 1; /* Send the background image to the back */
     transform: scaleX(-1);
   }
+  
   
   .menu-icon img {
     width: 35px; /* Adjust the size of the menu icon */
