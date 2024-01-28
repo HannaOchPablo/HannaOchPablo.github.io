@@ -125,13 +125,15 @@ img {
 
 .side-by-side-container {
   display: flex;
+  /*
+  flex-direction: column;
+  */
   justify-content: space-between;
   border: 2px solid #ddd;
   padding: 20px;
 }
 
 .event-schedule {
-  width: 48%;
   padding: 10px;
   border: 1px solid #ccc;
 }
@@ -159,7 +161,6 @@ img {
 }
 
 .faq-section {
-  width: 48%;
   padding: 10px;
   border: 1px solid #ccc;
 }
@@ -171,7 +172,7 @@ img {
 }
 
 .faq-item {
-  margin-bottom: 20px;
+  margin-bottom: 3px;
 }
 
 .question {
@@ -205,6 +206,14 @@ img {
   z-index: 1000; /* Set a higher z-index to ensure it appears in the foreground */
 }
 
+
+.google-form{
+  margin-top: 30px;
+  padding: auto;
+  width:100%;
+  height: 1100px;
+  overflow: hidden;
+}
 
 
 
@@ -295,6 +304,13 @@ img {
   .mobile-dropdown.show-dropdown {
     display: flex;
     animation: fadeInDown 0.5s ease; /* Add a fade-in animation */
+  }
+  .side-by-side-container {
+    flex-direction: column; /* Adjust to column for mobile devices */
+    padding: 10px; /* Adjust padding for better spacing on mobile */
+  }
+  .event-schedule {
+    margin-bottom: 20px;
   }
 }
 
