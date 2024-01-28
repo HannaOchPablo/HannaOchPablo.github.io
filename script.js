@@ -27,6 +27,7 @@ function checkName() {
   const submitButton = document.getElementById('submitBtn');
 
   // Search among the objects in guestList for a guest with the given name
+  
   const foundGuest = guestList.find(guest => guest.name === guestName);
 
   if (foundGuest) {

@@ -72,8 +72,19 @@ body {
   transition: background-color 0.7s ease; /* Transition effect for background color */
 }
 
+
+.container-main {
+  position: relative; /* Set position to relative for absolute positioning of the background image */
+  max-width: 1200px;
+  margin: 60px auto 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.7s ease; /* Transition effect for background color */
+}
+
 /* Add a new class for the background image */
-.container::before {
+.container-main::before {
   content: "";
   position: absolute;
   top: 100px;
@@ -88,6 +99,7 @@ body {
   z-index: 1; /* Send the background image to the back */
   transform: scaleX(-1);
 }
+
 
 header {
   position: relative; /* Set position to relative for stacking with the background image */
@@ -177,6 +189,7 @@ img {
 
 .question {
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 .course {
@@ -184,7 +197,7 @@ img {
 }
 .answer {
   color: #777;
-  margin-top: 5px;
+  margin-top: 0;
 }
 
 /* Add transition effect for background color change on container hover */
