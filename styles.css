@@ -133,6 +133,8 @@ img {
 
 .container p {
   font-size: 1.2em;
+  padding:0px; 
+  margin:0px;
 }
 
 .side-by-side-container {
@@ -184,7 +186,12 @@ img {
 }
 
 .faq-item {
-  margin-bottom: 3px;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+.food-description{
+  line-height: 35px;
 }
 
 .question {
@@ -228,6 +235,19 @@ img {
   overflow: hidden;
 }
 
+.contact-form{
+  text-align: center;
+}
+
+.contact-container{
+  text-align: center;
+}
+
+.contact-header{
+  text-align: center;
+  line-height: 35px;
+  padding-top: 40px;
+}
 
 
 /* Mobile styles */
@@ -261,6 +281,7 @@ img {
 
   .welcome-text {
     margin-bottom: 10px; /* Add margin for better spacing on mobile */
+    font-size: large;
   }
 
   img {
@@ -358,6 +379,7 @@ img {
   .welcome-text {
     flex: 1;
     max-width: 50%; /* Adjust the maximum width of the welcome text as needed */
+    font-size: larger;
   }
 
   .menu-icon {
